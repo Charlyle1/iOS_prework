@@ -11,7 +11,6 @@
 		374FD3431C30DD1B005D6E82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374FD3421C30DD1B005D6E82 /* ViewController.swift */; };
 		374FD3461C30DD1B005D6E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374FD3441C30DD1B005D6E82 /* Main.storyboard */; };
 		374FD3481C30DD1B005D6E82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374FD3471C30DD1B005D6E82 /* Assets.xcassets */; };
-		374FD34B1C30DD1B005D6E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374FD3491C30DD1B005D6E82 /* LaunchScreen.storyboard */; };
 		374FD3561C30DD1B005D6E82 /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374FD3551C30DD1B005D6E82 /* tipsTests.swift */; };
 		374FD3611C30DD1B005D6E82 /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374FD3601C30DD1B005D6E82 /* tipsUITests.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		374FD3421C30DD1B005D6E82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		374FD3451C30DD1B005D6E82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		374FD3471C30DD1B005D6E82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		374FD34A1C30DD1B005D6E82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		374FD34C1C30DD1B005D6E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374FD3511C30DD1B005D6E82 /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		374FD3551C30DD1B005D6E82 /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				374FD3421C30DD1B005D6E82 /* ViewController.swift */,
 				374FD3441C30DD1B005D6E82 /* Main.storyboard */,
 				374FD3471C30DD1B005D6E82 /* Assets.xcassets */,
-				374FD3491C30DD1B005D6E82 /* LaunchScreen.storyboard */,
 				374FD34C1C30DD1B005D6E82 /* Info.plist */,
 			);
 			path = tips;
@@ -193,6 +190,7 @@
 				TargetAttributes = {
 					374FD33C1C30DD1B005D6E82 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Q69VG8DB3Z;
 					};
 					374FD3501C30DD1B005D6E82 = {
 						CreatedOnToolsVersion = 7.2;
@@ -204,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 374FD3381C30DD1B005D6E82 /* Build configuration list for PBXProject "tips" */;
+			buildConfigurationList = 374FD3381C30DD1B005D6E82 /* Build configuration list for PBXProject "TipCalculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374FD34B1C30DD1B005D6E82 /* LaunchScreen.storyboard in Resources */,
 				374FD3481C30DD1B005D6E82 /* Assets.xcassets in Resources */,
 				374FD3461C30DD1B005D6E82 /* Main.storyboard in Resources */,
 			);
@@ -299,14 +296,6 @@
 				374FD3451C30DD1B005D6E82 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		374FD3491C30DD1B005D6E82 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				374FD34A1C30DD1B005D6E82 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -397,10 +386,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.tips;
+				PRODUCT_BUNDLE_IDENTIFIER = bcarly.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -408,10 +404,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.tips;
+				PRODUCT_BUNDLE_IDENTIFIER = bcarly.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -466,7 +468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		374FD3381C30DD1B005D6E82 /* Build configuration list for PBXProject "tips" */ = {
+		374FD3381C30DD1B005D6E82 /* Build configuration list for PBXProject "TipCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				374FD3631C30DD1B005D6E82 /* Debug */,
@@ -482,6 +484,7 @@
 				374FD3671C30DD1B005D6E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		374FD3681C30DD1B005D6E82 /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +493,7 @@
 				374FD36A1C30DD1B005D6E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		374FD36B1C30DD1B005D6E82 /* Build configuration list for PBXNativeTarget "tipsUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +502,7 @@
 				374FD36D1C30DD1B005D6E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
